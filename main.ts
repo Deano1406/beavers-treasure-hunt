@@ -1,5 +1,4 @@
 function Warmer () {
-    radio.sendString("Warmer")
     for (let index = 0; index < 5; index++) {
         basic.showLeds(`
             . . . . .
@@ -27,6 +26,7 @@ function Warmer () {
     }
 }
 input.onButtonPressed(Button.A, function () {
+    radio.sendString("Colder")
     Colder()
 })
 radio.onReceivedString(function (receivedString) {
@@ -38,10 +38,10 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 input.onButtonPressed(Button.B, function () {
+    radio.sendString("Warmer")
     Warmer()
 })
 function Colder () {
-    radio.sendString("Colder")
     for (let index = 0; index < 5; index++) {
         basic.showLeds(`
             . . . # .
