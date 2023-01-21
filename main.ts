@@ -33,6 +33,9 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "Colder") {
         Colder()
     }
+    if (receivedString == "Warmer") {
+        Warmer()
+    }
 })
 input.onButtonPressed(Button.B, function () {
     Warmer()
